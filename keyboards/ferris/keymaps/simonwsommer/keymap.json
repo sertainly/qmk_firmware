@@ -1,5 +1,5 @@
 {
-    "version": 3,
+    "version": 4,
     "notes": "",
     "documentation": "",
     "keyboard": "ferris/sweepv2.2",
@@ -7,14 +7,41 @@
     "layout": "LAYOUT_split_3x5_2",
     "layers": [
         [
-            "KC_X"        , "KC_L"        , "KC_D"           , "KC_K"          , "KC_V",        "KC_Z"        , "KC_W"        , "KC_O"           , "KC_U"          , "KC_SEMICOLON",
+            "KC_X",         "KC_L",         "KC_D",         "KC_K",         "KC_V",         "KC_Z",         "KC_W",         "KC_O",         "KC_U",         "KC_BACKSPACE",
 
-            "KC_S"        , "KC_R"        , "KC_T"           , "KC_N"          , "KC_F",        "KC_G"        , "KC_Y"        , "KC_E"           , "KC_I"          , "KC_A",
+            "KC_S",         "KC_R",         "KC_T",         "KC_N",         "KC_F",         "KC_G",         "KC_Y",         "KC_E",         "KC_I",         "KC_A",
 
-            "KC_Q"        , "KC_J"        , "KC_M"           , "KC_H"          , "KC_B",        "KC_P"        , "KC_C"        , "KC_QUOTE"       , "KC_COMMA"      , "KC_DOT",
+            "KC_Q",         "KC_J",         "KC_M",         "KC_H",         "KC_B",         "KC_P",         "KC_C",         "KC_QUOTE",     "KC_COMMA",     "KC_DOT",
 
-                                                               "KC_SPACE", "KC_LEFT_SHIFT",     "KC_RIGHT_CTRL", "KC_SPACE"
+                                                            "OSM(MOD_LSFT)","KC_SPACE",     "OSM(MOD_RCTL)","TO(1)"
         ],
+        [
+            "KC_ESCAPE",    "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_MINUS",     "KC_EQUAL",     "KC_BACKSPACE",
+
+            "KC_TAB",       "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_ENTER",
+
+            "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "TO(3)",
+
+                                                            "TO(0)",        "KC_SPACE",     "KC_RIGHT_ALT", "TO(2)"
+        ],
+        [
+            "KC_ESCAPE",    "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",     "KC_NO",     "KC_BACKSPACE",
+
+            "KC_TAB",       "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_ENTER",
+
+            "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "TO(3)",
+
+                                                            "TO(0)",        "KC_SPACE",     "KC_RIGHT_ALT", "TO(1)"
+        ],
+        [
+            "KC_ESCAPE",    "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_MINUS",     "KC_EQUAL",     "KC_BACKSPACE",
+
+            "KC_TAB",       "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_ENTER",
+
+            "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "TO(2)",
+
+                                                            "TO(0)",        "KC_SPACE",     "KC_RIGHT_ALT", "TO(1)"
+        ]
     ],
     "author": "simonwsommer"
 }
