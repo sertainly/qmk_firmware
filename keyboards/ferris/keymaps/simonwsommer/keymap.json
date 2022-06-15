@@ -16,9 +16,9 @@
                                                             "OSM(MOD_LSFT)","KC_SPACE",     "OSM(MOD_RCTL)","TO(1)"
         ],
         [
-            "KC_ESCAPE",    "KC_EXCLAIM",   "KC_PERCENT",   "KC_CIRCUMFLEX","KC_ASTERISK",  "KC_UNDERSCORE",     "KC_LEFT_PAREN",       "KC_RIGHT_PAREN",     "KC_EQUAL",     "KC_DELETE",
+            "KC_ESCAPE",    "KC_EXCLAIM",   "KC_PERCENT",   "KC_CIRCUMFLEX","KC_ASTERISK",  "KC_UNDERSCORE","KC_LEFT_CURLY_BRACE", "KC_RIGHT_CURLY_BRACE", "KC_EQUAL",        "KC_DELETE",
 
-            "KC_TAB",       "KC_AT",        "KC_HASH",      "KC_DOLLAR",    "KC_AMPERSAND", "KC_COLON",     "KC_LEFT_CURLY_BRACE","KC_RIGHT_CURLY_BRACE","KC_DOUBLE_QUOTE",    "KC_ENTER",
+            "KC_TAB",       "KC_AT",        "KC_HASH",      "KC_DOLLAR",    "KC_AMPERSAND", "KC_COLON",     "KC_LEFT_PAREN",       "KC_RIGHT_PAREN",       "KC_DOUBLE_QUOTE", "KC_ENTER",
 
             "OSM(MOD_LSFT)", "KC_LEFT_GUI",   "KC_MINUS",   "KC_PLUS",   "KC_SEMICOLON",  "KC_BACKSLASH", "KC_LEFT_BRACKET","KC_RIGHT_BRACKET", "KC_SLASH",      "TO(3)",
 
