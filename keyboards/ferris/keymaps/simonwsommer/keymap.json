@@ -1,5 +1,5 @@
 {
-    "version": 5,
+    "version": 6,
     "notes": "",
     "documentation": "",
     "keyboard": "ferris/sweepv2.2",
@@ -25,7 +25,7 @@
                                                             "TO(0)",        "KC_SPACE",     "KC_RIGHT_ALT", "TO(2)"
         ],
         [
-            "KC_ESCAPE",    "KC_NO",        "KC_UP",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_7",        "KC_8",        "KC_9",        "KC_BACKSPACE",
+            "KC_ESCAPE",    "KC_NO",        "KC_UP",        "KC_NO",  "LCTL(KC_INSERT)", "LSFT(KC_INSERT)", "KC_7",        "KC_8",        "KC_9",        "KC_BACKSPACE",
 
             "KC_TAB",       "KC_LEFT",       "KC_DOWN",     "KC_RIGHT",     "KC_NO",        "KC_NO",        "KC_4",        "KC_5",        "KC_6",        "KC_ENTER",
 
