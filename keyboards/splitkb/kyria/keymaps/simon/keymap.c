@@ -29,38 +29,35 @@ enum layers {
 #define NUMBERS  OSL(_NUMBERS)
 #define FKEYS    OSL(_FUNCTIONS)
 
-#define LALT_ENT  MT(MOD_LALT, KC_ENT)
-#define RALT_ENT  MT(MOD_RALT, KC_ENT)
-
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_SERTAIN] = LAYOUT(
-     KC_TAB          , KC_X     , KC_L       , KC_D       , KC_K          , KC_V         ,                                               KC_Z          , KC_W                , KC_O                 , KC_U            , KC_UNDERSCORE , KC_BACKSPACE ,
-     QK_GRAVE_ESCAPE , KC_S     , KC_R       , KC_T       , KC_N          , KC_F         ,                                               KC_G          , KC_Y                , KC_E                 , KC_I            , KC_A          , KC_QUOTE     ,
-     KC_LSPO         , KC_Q     , KC_J       , KC_M       , KC_H          , KC_B         , KC_LBRC  , KC_SLASH ,     FKEYS   , KC_RBRC , KC_P          , KC_C                , KC_COMMA             , KC_DOT          , RALT_ENT      , KC_RSPC      ,
-                                               XXXXXXX    , KC_LGUI       , MOD_LCTL     , LALT_ENT , NUMBERS  ,     SYMBOLS , KC_SPC  , KC_RCTL       , KC_SCLN             , XXXXXXX
+     KC_TAB           , KC_X     , KC_L       , KC_D       , KC_K          , KC_V             ,                                                            KC_Z             , KC_W                , KC_O                 , KC_U            , KC_UNDERSCORE , KC_BACKSPACE     ,
+     LALT_T(KC_ENTER) , KC_S     , KC_R       , KC_T       , KC_N          , KC_F             ,                                                            KC_G             , KC_Y                , KC_E                 , KC_I            , KC_A          , RALT_T(KC_ENTER) ,
+     KC_LSPO          , KC_Q     , KC_J       , KC_M       , KC_H          , KC_B             , KC_LBRC         , KC_SLASH ,           FKEYS   , KC_RBRC , KC_P             , KC_C                , KC_COMMA             , KC_DOT          , KC_QUOTE      , KC_RSPC          ,
+                                                XXXXXXX    , KC_LGUI       , LCTL_T(KC_ENTER) , QK_GRAVE_ESCAPE , NUMBERS  ,           SYMBOLS , KC_SPC  , LCTL_T(KC_ENTER) , KC_SCLN             , XXXXXXX
     ),
 
     [_SYMBOLS] = LAYOUT(
-     _______         , KC_GRAVE , KC_EXCLAIM , KC_PERCENT , KC_CIRCUMFLEX , KC_ASTERISK  ,                                               KC_UNDERSCORE , KC_LEFT_CURLY_BRACE , KC_RIGHT_CURLY_BRACE , KC_EQUAL        , KC_DELETE     , _______      ,
-     _______         , KC_TILDE , KC_AT      , KC_HASH    , KC_DOLLAR     , KC_AMPERSAND ,                                               KC_COLON      , KC_LEFT_PAREN       , KC_RIGHT_PAREN       , KC_DOUBLE_QUOTE , KC_RPRN       , _______      ,
-     _______         , _______  , KC_PIPE    , KC_MINUS   , KC_PLUS       , KC_SEMICOLON , _______  , _______  ,     _______ , _______ , KC_BACKSLASH  , KC_LEFT_BRACKET     , KC_RIGHT_BRACKET     , KC_SLASH        , KC_SLSH       , _______      ,
-                                               XXXXXXX    , _______       , _______      , _______  , _______  ,     _______ , _______ , _______       , _______             , XXXXXXX
+     _______          , KC_GRAVE , KC_EXCLAIM , KC_PERCENT , KC_CIRCUMFLEX , KC_ASTERISK      ,                                                            KC_UNDERSCORE    , KC_LEFT_CURLY_BRACE , KC_RIGHT_CURLY_BRACE , KC_EQUAL        , KC_DELETE     , _______          ,
+     _______          , KC_TILDE , KC_AT      , KC_HASH    , KC_DOLLAR     , KC_AMPERSAND     ,                                                            KC_COLON         , KC_LEFT_PAREN       , KC_RIGHT_PAREN       , KC_DOUBLE_QUOTE , KC_RPRN       , _______          ,
+     _______          , _______  , KC_PIPE    , KC_MINUS   , KC_PLUS       , KC_SEMICOLON     , _______         , _______  ,           _______ , _______ , KC_BACKSLASH     , KC_LEFT_BRACKET     , KC_RIGHT_BRACKET     , KC_SLASH        , KC_SLSH       , _______          ,
+                                                XXXXXXX    , _______       , _______          , _______         , _______  ,           _______ , _______ , _______          , _______             , XXXXXXX
     ),
 
     [_NUMBERS] = LAYOUT(
-      _______        , _______  , _______    , KC_UP      , _______       , _______      ,                                               _______       , _______             , _______              , _______         , _______       , _______       ,
-      _______        , _______  , KC_LEFT    , KC_DOWN    , KC_RIGHT      , _______      ,                                               _______       , _______             , _______              , _______         , _______       , _______       ,
-      _______        , _______  , _______    , _______    , _______       , _______      , _______ , _______   ,     _______ , _______ , _______       , _______             , _______              , _______         , _______       , _______       ,
-                                               XXXXXXX    , _______       , _______      , _______ , _______   ,     _______ , _______ , _______       , _______             , XXXXXXX
+      _______         , _______  , _______    , KC_UP      , _______       , _______          ,                                                            _______          , _______             , _______              , _______         , _______       , _______          ,
+      _______         , _______  , KC_LEFT    , KC_DOWN    , KC_RIGHT      , _______          ,                                                            _______          , _______             , _______              , _______         , _______       , _______          ,
+      _______         , _______  , _______    , _______    , _______       , _______          , _______         , _______   ,          _______ , _______ , _______          , _______             , _______              , _______         , _______       , _______          ,
+                                                XXXXXXX    , _______       , _______          , _______         , _______   ,          _______ , _______ , _______          , _______             , XXXXXXX
     ),
 
     [_FUNCTIONS] = LAYOUT(
-      _______        , KC_F9    , KC_F10     , KC_F11     , KC_F12        , _______      ,                                               _______       , _______             , _______              , _______         , _______       , _______       ,
-      _______        , KC_F5    , KC_F6      , KC_F7      , KC_F8         , _______      ,                                               _______       , _______             , _______              , _______         , _______       , _______       ,
-      _______        , KC_F1    , KC_F2      , KC_F3      , KC_F4         , _______      , _______ , _______   ,     _______ , _______ , _______       , _______             , _______              , _______         , _______       , _______       ,
-                                               XXXXXXX    , _______       , _______      , _______ , _______   ,     _______ , _______ , _______       , _______             , XXXXXXX
+      _______         , KC_F9    , KC_F10     , KC_F11     , KC_F12        , _______          ,                                                            _______          , _______             , _______              , _______         , _______       , _______          ,
+      _______         , KC_F5    , KC_F6      , KC_F7      , KC_F8         , _______          ,                                                            _______          , _______             , _______              , _______         , _______       , _______          ,
+      _______         , KC_F1    , KC_F2      , KC_F3      , KC_F4         , _______          , _______         , _______   ,          _______ , _______ , _______          , _______             , _______              , _______         , _______       , _______          ,
+                                                XXXXXXX    , _______       , _______          , _______         , _______   ,          _______ , _______ , _______          , _______             , XXXXXXX
     ),
 
 };
