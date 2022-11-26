@@ -32,3 +32,6 @@
 // When using the default resolution of 4, if you notice your encoder skipping
 // every other tick, lower the resolution to 2.
 #define ENCODER_RESOLUTION 2
+
+// How to activate CAPS WORD
+#define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
