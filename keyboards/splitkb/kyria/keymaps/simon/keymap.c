@@ -25,7 +25,7 @@ enum layers {
 
 // Aliases for readability
 #define SERTAIN  DF(_SERTAIN)
-#define SYMBOLS  OSL(_SYMBOLS)
+#define SYMBOLS  OSL(_SYMBOLS)  // https://docs.qmk.fm/#/feature_layers?id=switching-and-toggling-layers
 #define NUMBERS  OSL(_NUMBERS)
 #define FKEYS    OSL(_FUNCTIONS)
 
@@ -40,16 +40,16 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ),
 
     [_SYMBOLS] = LAYOUT(
-     _______          , KC_GRAVE , KC_EXCLAIM , KC_PERCENT , KC_CIRCUMFLEX , KC_ASTERISK      ,                                                            KC_UNDERSCORE    , KC_LEFT_CURLY_BRACE , KC_RIGHT_CURLY_BRACE , KC_EQUAL        , KC_DELETE     , _______          ,
+     _______          , KC_GRAVE , KC_EXCLAIM , KC_PERCENT , KC_CIRCUMFLEX , KC_ASTERISK      ,                                                            KC_UNDERSCORE    , KC_LEFT_CURLY_BRACE , KC_RIGHT_CURLY_BRACE , KC_EQUAL        , _______       , KC_DELETE        ,
      _______          , KC_TILDE , KC_AT      , KC_HASH    , KC_DOLLAR     , KC_AMPERSAND     ,                                                            KC_COLON         , KC_LEFT_PAREN       , KC_RIGHT_PAREN       , KC_DOUBLE_QUOTE , KC_RPRN       , _______          ,
      _______          , _______  , KC_PIPE    , KC_MINUS   , KC_PLUS       , KC_SEMICOLON     , _______         , _______  ,           _______ , _______ , KC_BACKSLASH     , KC_LEFT_BRACKET     , KC_RIGHT_BRACKET     , KC_SLASH        , KC_SLSH       , _______          ,
                                                 XXXXXXX    , _______       , _______          , _______         , _______  ,           _______ , _______ , _______          , _______             , XXXXXXX
     ),
 
     [_NUMBERS] = LAYOUT(
-      _______         , _______  , _______    , KC_UP      , _______       , _______          ,                                                            _______          , KC_7                , KC_8                 , KC_9            , _______       , _______          ,
+      _______         , _______  , _______    , KC_UP      , KC_CIRCUMFLEX , KC_ASTERISK      ,                                                            _______          , KC_7                , KC_8                 , KC_9            , _______       , _______          ,
       _______         , _______  , KC_LEFT    , KC_DOWN    , KC_RIGHT      , _______          ,                                                            _______          , KC_4                , KC_5                 , KC_6            , _______       , _______          ,
-      _______         , _______  , _______    , _______    , _______       , KC_DOT           , _______         , _______   ,          _______ , _______ , _______          , KC_1                , KC_2                 , KC_3            , _______       , _______          ,
+      _______         , _______  , _______    , KC_MINUS   , KC_PLUS       , KC_DOT           , _______         , _______   ,          _______ , _______ , _______          , KC_1                , KC_2                 , KC_3            , _______       , _______          ,
                                                 XXXXXXX    , _______       , _______          , _______         , _______   ,          _______ , _______ , _______          , KC_0                , XXXXXXX
     ),
 

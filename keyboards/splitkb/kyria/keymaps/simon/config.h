@@ -35,3 +35,9 @@
 
 // How to activate CAPS WORD
 #define BOTH_SHIFTS_TURNS_ON_CAPS_WORD
+
+// How many times to tap to toggle layer
+#define TAPPING_TOGGLE 2
+#define ONESHOT_TAP_TOGGLE 2  // Tapping this number of times holds the key **UNTIL TAPPED ONCE AGAIN**.
+#define ONESHOT_TIMEOUT 20000  // Time (in ms) before the one shot key is released
+
