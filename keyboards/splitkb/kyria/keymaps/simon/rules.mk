@@ -5,4 +5,3 @@ CAPS_WORD_ENABLE = yes  # For activation see config.h
 COMMAND_ENABLE = no     # So that there is no clash with CAPS WORDS
 RGBLIGHT_ENABLE = no    # Disable keyboard RGB underglow
 MOUSEKEY_ENABLE = no    # Saves a bit of space
-CONVERT_TO=elite_pi     # Tell qmk to compile for the Elite Pi microcontroller
