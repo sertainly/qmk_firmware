@@ -33,10 +33,10 @@ enum layers {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_SERTAIN] = LAYOUT(
-     KC_TAB           , KC_X     , KC_L       , KC_D       , KC_K          , KC_V             ,                                                            KC_Z             , KC_W                , KC_O                 , KC_U            , KC_BACKSPACE  , KC_UNDERSCORE    ,
-     LALT_T(KC_ENTER) , KC_S     , KC_R       , KC_T       , KC_N          , KC_F             ,                                                            KC_G             , KC_Y                , KC_E                 , KC_I            , KC_A          , RALT_T(KC_ENTER) ,
+     KC_TAB           , KC_X     , KC_L       , KC_D       , KC_K          , KC_V             ,                                                            KC_Z             , KC_W                , KC_O                 , KC_U            , KC_BACKSPACE  , KC_SEMICOLON     ,
+     LALT_T(KC_ENTER) , KC_S     , KC_R       , KC_T       , KC_N          , KC_F             ,                                                            KC_G             , KC_Y                , KC_E                 , KC_I            , KC_A          , RALT_T(KC_EQUAL) ,
      KC_LSPO          , KC_Q     , KC_J       , KC_M       , KC_H          , KC_B             , KC_LBRC         , KC_SLASH ,           FKEYS   , KC_RBRC , KC_P             , KC_C                , KC_COMMA             , KC_DOT          , KC_QUOTE      , KC_RSPC          ,
-                                                XXXXXXX    , KC_LGUI       , LCTL_T(KC_ENTER) , QK_GRAVE_ESCAPE , NUMBERS  ,           SYMBOLS , KC_SPC  , LCTL_T(KC_ENTER) , KC_SEMICOLON        , XXXXXXX
+                                                XXXXXXX    , KC_LGUI       , LCTL_T(KC_ENTER) , QK_GRAVE_ESCAPE , NUMBERS  ,           SYMBOLS , KC_SPC  , LCTL_T(KC_ENTER) , KC_UNDERSCORE       , XXXXXXX
     ),
 
     [_SYMBOLS] = LAYOUT(
