@@ -25,7 +25,7 @@ enum layers {
 
 // Aliases for readability
 #define SERTAIN  DF(_SERTAIN)
-#define SYMBOLS  OSL(_SYMBOLS)  // https://docs.qmk.fm/#/feature_layers?id=switching-and-toggling-layers
+#define SYMBOLS  LT(_SYMBOLS, KC_ENTER)  // https://docs.qmk.fm/#/feature_layers?id=switching-and-toggling-layers
 #define NUMBERS  OSL(_NUMBERS)
 #define FKEYS    OSL(_FUNCTIONS)
 
@@ -33,23 +33,23 @@ enum layers {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_SERTAIN] = LAYOUT(
-     KC_TAB           , KC_X     , KC_L       , KC_D       , KC_K          , KC_V             ,                                                            KC_Z             , KC_W                , KC_O                 , KC_U            , KC_BACKSPACE  , KC_SEMICOLON     ,
-     LALT_T(KC_ENTER) , KC_S     , KC_R       , KC_T       , KC_N          , KC_F             ,                                                            KC_G             , KC_Y                , KC_E                 , KC_I            , KC_A          , RALT_T(KC_EQUAL) ,
-     KC_LSPO          , KC_Q     , KC_J       , KC_M       , KC_H          , KC_B             , KC_LBRC         , KC_SLASH ,           FKEYS   , KC_RBRC , KC_P             , KC_C                , KC_COMMA             , KC_DOT          , KC_QUOTE      , KC_RSPC          ,
-                                                XXXXXXX    , KC_LGUI       , LCTL_T(KC_ENTER) , QK_GRAVE_ESCAPE , NUMBERS  ,           SYMBOLS , KC_SPC  , LCTL_T(KC_ENTER) , KC_UNDERSCORE       , XXXXXXX
+     KC_LEFT_ALT      , KC_X     , KC_L         , KC_D       , KC_K          , KC_V             ,                                                                     KC_Z             , KC_W                , KC_O                 , KC_U            , KC_BACKSPACE  , KC_DELETE      ,
+     KC_TAB           , KC_S     , KC_R         , KC_T       , KC_N          , KC_F             ,                                                                     KC_G             , KC_Y                , KC_E                 , KC_I            , KC_A          , KC_RIGHT_ALT   ,
+     KC_LEFT_SHIFT    , KC_Q     , KC_J         , KC_M       , KC_H          , KC_B             , KC_LBRC , KC_SLASH ,           KC_F12           , KC_RBRC          , KC_P             , KC_C                , KC_COMMA             , KC_DOT          , KC_QUOTE      , KC_RIGHT_SHIFT ,
+                                                  XXXXXXX    , KC_LGUI       , LSFT_T(KC_ENTER) , KC_SPC  , NUMBERS  ,           FKEYS , RCTL_T(KC_ESCAPE) , SYMBOLS          , KC_UNDERSCORE       , XXXXXXX
     ),
 
     [_SYMBOLS] = LAYOUT(
-     _______          , KC_GRAVE , KC_EXCLAIM , KC_PERCENT , KC_CIRCUMFLEX , KC_ASTERISK      ,                                                            KC_UNDERSCORE    , KC_LEFT_CURLY_BRACE , KC_RIGHT_CURLY_BRACE , KC_EQUAL        , _______       , KC_DELETE        ,
-     _______          , KC_TILDE , KC_AT      , KC_HASH    , KC_DOLLAR     , KC_AMPERSAND     ,                                                            KC_COLON         , KC_LEFT_PAREN       , KC_RIGHT_PAREN       , KC_DOUBLE_QUOTE , KC_RPRN       , _______          ,
-     _______          , _______  , KC_PIPE    , KC_MINUS   , KC_PLUS       , KC_SEMICOLON     , _______         , _______  ,           _______ , _______ , KC_BACKSLASH     , KC_LEFT_BRACKET     , KC_RIGHT_BRACKET     , KC_SLASH        , KC_SLSH       , _______          ,
-                                                XXXXXXX    , _______       , _______          , _______         , _______  ,           _______ , _______ , _______          , _______             , XXXXXXX
+     _______          , KC_GRAVE , KC_EXCLAIM   , KC_PERCENT , KC_CIRCUMFLEX , KC_ASTERISK  ,                                                                KC_UNDERSCORE    , KC_LEFT_CURLY_BRACE , KC_RIGHT_CURLY_BRACE , KC_EQUAL        , _______       , _______          ,
+     _______          , KC_TILDE , KC_AT        , KC_HASH    , KC_DOLLAR     , KC_AMPERSAND ,                                                                KC_COLON         , KC_LEFT_PAREN       , KC_RIGHT_PAREN       , KC_DOUBLE_QUOTE , _______       , _______          ,
+     _______          , _______  , KC_SEMICOLON , KC_MINUS   , KC_PLUS       , KC_PIPE      , _______     , _______  ,           _______         , _______ , KC_BACKSLASH     , KC_LEFT_BRACKET     , KC_RIGHT_BRACKET     , KC_SLASH        , _______       , _______          ,
+                                                  XXXXXXX    , _______       , _______      , _______     , _______  ,           _______         , _______ , _______          , _______             , XXXXXXX
     ),
 
     [_NUMBERS] = LAYOUT(
       _______         , _______  , _______    , KC_UP      , KC_CIRCUMFLEX , KC_ASTERISK      ,                                                            _______          , KC_7                , KC_8                 , KC_9            , _______       , _______          ,
       _______         , _______  , KC_LEFT    , KC_DOWN    , KC_RIGHT      , _______          ,                                                            _______          , KC_4                , KC_5                 , KC_6            , _______       , _______          ,
-      _______         , _______  , _______    , KC_MINUS   , KC_PLUS       , KC_DOT           , _______         , _______   ,          _______ , _______ , _______          , KC_1                , KC_2                 , KC_3            , _______       , _______          ,
+      _______         , _______  , _______    , KC_MINUS   , KC_PLUS       , KC_DOT           , _______         , _______   ,          _______ , _______ , KC_0             , KC_1                , KC_2                 , KC_3            , _______       , _______          ,
                                                 XXXXXXX    , _______       , _______          , _______         , _______   ,          _______ , _______ , _______          , KC_0                , XXXXXXX
     ),
 
@@ -140,16 +140,16 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
     if (index == 0) {
         // Volume control
         if (clockwise) {
-            tap_code(KC_VOLU);
+            tap_code(KC_RIGHT);
         } else {
-            tap_code(KC_VOLD);
+            tap_code(KC_LEFT);
         }
     } else if (index == 1) {
         // Page up/Page down
         if (clockwise) {
-            tap_code(KC_PGDN);
+            tap_code(KC_UP);
         } else {
-            tap_code(KC_PGUP);
+            tap_code(KC_DOWN);
         }
     }
     return false;

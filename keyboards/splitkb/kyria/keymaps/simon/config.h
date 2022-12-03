@@ -41,3 +41,5 @@
 #define ONESHOT_TAP_TOGGLE 2  // Tapping this number of times holds the key **UNTIL TAPPED ONCE AGAIN**.
 #define ONESHOT_TIMEOUT 20000  // Time (in ms) before the one shot key is released
 
+// Recommended for Elite Pi
+// #define USB_VBUS_PIN GP19
