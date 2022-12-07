@@ -42,4 +42,6 @@
 #define ONESHOT_TIMEOUT 20000  // Time (in ms) before the one shot key is released
 
 // Recommended for Elite Pi
-// #define USB_VBUS_PIN GP19
+# ifdef CONVERT_TO_ELITE_PI
+#     define USB_VBUS_PIN 19U
+# endif
