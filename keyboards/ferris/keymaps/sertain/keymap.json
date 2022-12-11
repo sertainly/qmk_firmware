@@ -2,8 +2,8 @@
     "version": 8,
     "notes": "",
     "documentation": "",
-    "keyboard": "ferris/sweepv2.2",
-    "keymap": "Sertain",
+    "keyboard": "ferris/sweep",
+    "keymap": "sertain",
     "layout": "LAYOUT_split_3x5_2",
     "layers": [
         [
@@ -13,34 +13,34 @@
 
             "KC_Q",         "KC_J",         "KC_M",         "KC_H",         "KC_B",         "KC_P",         "KC_C",         "KC_COMMA",     "KC_DOT",     "KC_QUOTE",
 
-                                                            "OSM(MOD_LSFT)","KC_SPACE",     "OSM(MOD_RCTL)","TO(1)"
+                                                            "LSFT_T(KC_ENTER)","LT(2, KC_SPACE)",     "RCTL_T(KC_ESCAPE)","LT(1, KC_ENTER)"
         ],
         [
             "KC_ESCAPE",    "KC_EXCLAIM",   "KC_PERCENT",   "KC_CIRCUMFLEX","KC_ASTERISK",  "KC_UNDERSCORE","KC_LEFT_CURLY_BRACE", "KC_RIGHT_CURLY_BRACE", "KC_EQUAL",        "KC_DELETE",
 
             "KC_TAB",       "KC_AT",        "KC_HASH",      "KC_DOLLAR",    "KC_AMPERSAND", "KC_COLON",     "KC_LEFT_PAREN",       "KC_RIGHT_PAREN",       "KC_DOUBLE_QUOTE", "KC_ENTER",
 
-            "OSM(MOD_LSFT)", "KC_LEFT_GUI", "KC_MINUS",     "KC_PLUS",   "KC_SEMICOLON",    "KC_BACKSLASH", "KC_LEFT_BRACKET",     "KC_RIGHT_BRACKET",     "KC_SLASH",        "TO(3)",
+            "KC_LSFT", "KC_LEFT_GUI", "KC_MINUS",     "KC_PLUS",   "KC_SEMICOLON",    "KC_BACKSLASH", "KC_LEFT_BRACKET",     "KC_RIGHT_BRACKET",     "KC_SLASH",        "KC_RALT",
 
-                                                            "TO(0)",        "KC_SPACE",     "KC_RIGHT_ALT", "TO(2)"
+                                                            "KC_NO",        "KC_NO",     "KC_NO", "KC_NO"
         ],
         [
             "KC_ESCAPE",    "KC_SLASH",     "KC_UP",     "KC_ASTERISK",  "LCTL(KC_INSERT)", "LSFT(KC_INSERT)", "KC_7",     "KC_8",        "KC_9",        "KC_BACKSPACE",
 
             "KC_TAB",       "KC_LEFT",      "KC_DOWN",   "KC_RIGHT",        "KC_TILDE",     "KC_GRAVE",        "KC_4",     "KC_5",        "KC_6",        "KC_ENTER",
 
-            "OSM(MOD_LSFT)","KC_LEFT_GUI",  "KC_MINUS",  "KC_PLUS",         "KC_DOT",       "KC_0",         "KC_1",        "KC_2",        "KC_3",        "TO(1)",
+            "KC_LSFT","KC_LEFT_GUI",  "KC_MINUS",  "KC_PLUS",         "KC_DOT",       "KC_0",         "KC_1",        "KC_2",        "KC_3",        "KC_RALT",
 
-                                                            "TO(0)",        "KC_SPACE",     "OSM(MOD_RCTL)","TO(3)"
+                                                            "KC_NO",        "KC_NO",     "KC_NO", "LT(3, KC_ENTER)"
         ],
         [
             "KC_ESCAPE",    "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_F10",        "KC_F11",     "KC_F12",     "KC_NO",
 
             "KC_TAB",       "KC_F1",        "KC_F2",        "KC_F3",        "KC_F4",        "KC_F5",        "KC_F6",         "KC_F7",      "KC_F8",      "KC_F9",
 
-            "KC_CAPS_LOCK", "KC_LEFT_GUI",  "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",         "KC_NO",      "KC_NO",      "TO(1)"
+            "KC_CAPS_LOCK", "KC_LEFT_GUI",  "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",        "KC_NO",         "KC_NO",      "KC_NO",      "KC_RALT",
 
-                                                            "TO(0)",        "KC_NO",        "KC_NO",        "TO(2)"
+                                                            "KC_NO",        "KC_NO",    "KC_NO",        "TO(2)"
         ]
     ],
     "author": "simonwsommer"
