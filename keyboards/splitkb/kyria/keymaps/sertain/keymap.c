@@ -24,40 +24,40 @@ enum layers {
 
 
 // Aliases for readability
-#define SERTAIN  DF(_SERTAIN)
-#define SYMBOLS  LT(_SYMBOLS, KC_ENTER)  // https://docs.qmk.fm/#/feature_layers?id=switching-and-toggling-layers
-#define NUMBERS  OSL(_NUMBERS)
-#define FKEYS    OSL(_FUNCTIONS)
+#define SERTAIN      DF(_SERTAIN)
+#define SYMBOLS_ESC  LT(_SYMBOLS, KC_ESC)  // https://docs.qmk.fm/#/feature_layers?id=switching-and-toggling-layers
+#define NUMBERS      MO(_NUMBERS)
+#define FKEYS        MO(_FUNCTIONS)
 
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [_SERTAIN] = LAYOUT(
-     KC_LEFT_ALT      , KC_X     , KC_L         , KC_D       , KC_K          , KC_V             ,                                                                     KC_Z             , KC_W                , KC_O                 , KC_U            , KC_BACKSPACE  , KC_DELETE      ,
-     KC_TAB           , KC_S     , KC_R         , KC_T       , KC_N          , KC_F             ,                                                                     KC_G             , KC_Y                , KC_E                 , KC_I            , KC_A          , KC_RIGHT_ALT   ,
-     KC_LEFT_SHIFT    , KC_Q     , KC_J         , KC_M       , KC_H          , KC_B             , KC_LBRC , KC_SLASH ,           KC_F12           , KC_RBRC          , KC_P             , KC_C                , KC_COMMA             , KC_DOT          , KC_QUOTE      , KC_RIGHT_SHIFT ,
-                                                  XXXXXXX    , KC_LGUI       , LSFT_T(KC_ENTER) , KC_SPC  , NUMBERS  ,           FKEYS , RCTL_T(KC_ESCAPE) , SYMBOLS          , KC_UNDERSCORE       , XXXXXXX
+     KC_LEFT_ALT      , KC_X     , KC_L         , KC_D       , KC_K          , KC_V      ,                                                              KC_Z             , KC_W                , KC_O                 , KC_U            , KC_BACKSPACE  , KC_DELETE      ,
+     KC_TAB           , KC_S     , KC_R         , KC_T       , KC_N          , KC_F      ,                                                              KC_G             , KC_Y                , KC_E                 , KC_I            , KC_A          , KC_QUESTION    ,
+     KC_LEFT_SHIFT    , KC_Q     , KC_J         , KC_M       , KC_H          , KC_B      , KC_LCTL        , KC_SLASH ,           FKEYS  , KC_RGUI     , KC_P             , KC_C                , KC_COMMA             , KC_DOT          , KC_QUOTE      , KC_RIGHT_SHIFT ,
+                                                  KC_LALT    , KC_LGUI       , KC_ENTER  , LSFT_T(KC_SPC) , NUMBERS  ,           KC_F12 , SYMBOLS_ESC , KC_RIGHT_CTRL    , KC_ENTER            , KC_RIGHT_ALT
     ),
 
     [_SYMBOLS] = LAYOUT(
-     _______          , KC_GRAVE , KC_EXCLAIM   , KC_PERCENT , KC_CIRCUMFLEX , KC_ASTERISK  ,                                                                KC_UNDERSCORE    , KC_LEFT_CURLY_BRACE , KC_RIGHT_CURLY_BRACE , KC_EQUAL        , _______       , _______          ,
-     _______          , KC_TILDE , KC_AT        , KC_HASH    , KC_DOLLAR     , KC_AMPERSAND ,                                                                KC_COLON         , KC_LEFT_PAREN       , KC_RIGHT_PAREN       , KC_DOUBLE_QUOTE , _______       , _______          ,
-     _______          , _______  , KC_SEMICOLON , KC_MINUS   , KC_PLUS       , KC_PIPE      , _______     , _______  ,           _______         , _______ , KC_BACKSLASH     , KC_LEFT_BRACKET     , KC_RIGHT_BRACKET     , KC_SLASH        , _______       , _______          ,
-                                                  XXXXXXX    , _______       , _______      , _______     , _______  ,           _______         , _______ , _______          , _______             , XXXXXXX
+     _______          , KC_GRAVE , KC_EXCLAIM   , KC_PERCENT , KC_CIRCUMFLEX , KC_ASTERISK  ,                                                            KC_UNDERSCORE    , KC_LEFT_CURLY_BRACE , KC_RIGHT_CURLY_BRACE , KC_EQUAL        , _______       , _______          ,
+     _______          , _______  , KC_AT        , KC_HASH    , KC_DOLLAR     , KC_AMPERSAND ,                                                            KC_COLON         , KC_LEFT_PAREN       , KC_RIGHT_PAREN       , KC_DOUBLE_QUOTE , _______       , _______          ,
+     _______          , _______  , KC_SEMICOLON , KC_MINUS   , KC_PLUS       , KC_PIPE      , _______     , _______  ,           _______ , _______     , KC_BACKSLASH     , KC_LEFT_BRACKET     , KC_RIGHT_BRACKET     , KC_SLASH        , _______       , _______          ,
+                                                  _______    , _______       , _______      , _______     , _______  ,           _______ , _______     , _______          , _______             , _______
     ),
 
     [_NUMBERS] = LAYOUT(
-      _______         , _______  , _______    , KC_UP      , KC_CIRCUMFLEX , KC_ASTERISK      ,                                                            _______          , KC_7                , KC_8                 , KC_9            , _______       , _______          ,
-      _______         , _______  , KC_LEFT    , KC_DOWN    , KC_RIGHT      , _______          ,                                                            _______          , KC_4                , KC_5                 , KC_6            , _______       , _______          ,
-      _______         , _______  , _______    , KC_MINUS   , KC_PLUS       , KC_DOT           , _______         , _______   ,          _______ , _______ , KC_0             , KC_1                , KC_2                 , KC_3            , _______       , _______          ,
-                                                XXXXXXX    , _______       , _______          , _______         , _______   ,          _______ , _______ , _______          , KC_0                , XXXXXXX
+      _______         , _______  , _______    , KC_UP      , KC_CIRCUMFLEX , KC_ASTERISK      ,                                                          _______          , KC_7                , KC_8                 , KC_9            , _______       , _______          ,
+      _______         , _______  , KC_LEFT    , KC_DOWN    , KC_RIGHT      , _______          ,                                                          _______          , KC_4                , KC_5                 , KC_6            , _______       , _______          ,
+      _______         , _______  , _______    , KC_MINUS   , KC_PLUS       , KC_DOT           , _______   , _______   ,          _______ , _______     , KC_0             , KC_1                , KC_2                 , KC_3            , _______       , _______          ,
+                                                _______    , _______       , _______          , _______   , _______   ,          _______ , _______     , _______          , _______             , _______
     ),
 
     [_FUNCTIONS] = LAYOUT(
       _______         , KC_F9    , KC_F10     , KC_F11     , KC_F12        , _______          ,                                                            _______          , _______             , _______              , _______         , _______       , _______          ,
       _______         , KC_F5    , KC_F6      , KC_F7      , KC_F8         , _______          ,                                                            _______          , _______             , _______              , _______         , _______       , _______          ,
       _______         , KC_F1    , KC_F2      , KC_F3      , KC_F4         , _______          , _______         , _______   ,          _______ , _______ , _______          , _______             , _______              , _______         , _______       , _______          ,
-                                                XXXXXXX    , _______       , _______          , _______         , _______   ,          _______ , _______ , _______          , _______             , XXXXXXX
+                                                _______    , _______       , _______          , _______         , _______   ,          _______ , _______ , _______          , _______             , _______
     ),
 
 };
@@ -68,6 +68,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * DO NOT edit the rev2.c file; instead override the weakly defined default functions by your own.
  */
 
+/*
 #ifdef OLED_ENABLE
 oled_rotation_t oled_init_user(oled_rotation_t rotation) { return OLED_ROTATION_180; }
 
@@ -155,3 +156,5 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
     return false;
 }
 #endif
+*/
+
